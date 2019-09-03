@@ -9,3 +9,5 @@ it 'funds are reduced at withdraw' do
     expect(subject.funds).to eq 950
   end
 end
+
+hai
