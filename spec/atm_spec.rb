@@ -1,4 +1,5 @@
 require './lib/atm.rb'
+require 'date'
 
 describe Atm do
   let (:account) { instance_double('Account') }
@@ -22,15 +23,4 @@ describe Atm do
     expect(subject.withdraw(45, account)). to eq expected_output
   end
 
-end
-
-def withdraw(amount, account)
-  case 
-  when amount > account.balance
-    return
-  else
-    @funds -= amount
-    account.balance = account.balance - amount
-    { status: true, message: 'success', date: Date.today, amount: amount }
-  end
 end
