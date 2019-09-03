@@ -21,4 +21,16 @@ describe Atm do
     expected_output = { status: true, message: 'success', date: Date.today, amount: 45 }
     expect(subject.withdraw(45, account)). to eq expected_output
   end
+
+end
+
+def withdraw(amount, account)
+  case 
+  when amount > account.balance
+    return
+  else
+    @funds -= amount
+    account.balance = account.balance - amount
+    { status: true, message: 'success', date: Date.today, amount: amount }
+  end
 end
