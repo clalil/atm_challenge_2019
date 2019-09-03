@@ -1,4 +1,3 @@
-
 require './lib/atm.rb'
 describe Atm do
   it 'has 1000$ on initialize' do
