@@ -20,9 +20,5 @@ I want each person to have a separate account
  In order to ensuer that an Account holder can only withdraw  
  funds that he has balance for   
  i want to allow a withdrawal only if there are sufficient funds  
- in the account
-
- ```
- Debugging the git flow
- ```
+ in the account  
  
