@@ -1,5 +1,5 @@
 # atm_challenge_2019
-
+```
 As a programmer  
 In order to produce good quality code  
 I want to work in a test driven development and unit test my code  
@@ -21,4 +21,8 @@ I want each person to have a separate account
  funds that he has balance for   
  i want to allow a withdrawal only if there are sufficient funds  
  in the account  
- 
+
+ As an ATM operator  
+ In order for our customers to withdraw funds  
+ I need to make sure that we only allow withdrawals if there are funds available  
+```
