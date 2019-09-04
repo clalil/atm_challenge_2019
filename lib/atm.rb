@@ -24,14 +24,6 @@ class Atm
   end
   
   private
-  
-  def account_disabled?(account_status)
-    account_status != :active
-  end
-
-  def card_expired?(exp_date)
-    Date.strptime(exp_date, '%m/%y') < Date.today
-  end
 
   def insufficient_funds_in_account?(amount, account)
     amount > account.balance
@@ -49,6 +41,14 @@ class Atm
    
   def incorrect_pin?(pin_code, actual_pin)
     pin_code != actual_pin
+  end
+
+  def card_expired?(exp_date)
+    Date.strptime(exp_date, '%m/%y') < Date.today
+  end
+
+  def account_disabled?(account_status)
+    account_status != :active
   end
 
   def add_bills(amount)
