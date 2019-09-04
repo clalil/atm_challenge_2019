@@ -14,4 +14,8 @@ class Account
       @account_status = :active
     end
 
+    def deactivate
+        @account_status = :deactivated
+    end
+
 end
