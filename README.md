@@ -1,4 +1,14 @@
-# atm_challenge_2019
+# The ATM challenge
+
+## Built with
+**Programming language:** Ruby  
+**Testing framework:** [RSpec](https://rspec.info/) 
+
+## Authors  
+[Clarissa Liljander](https://github.com/clalil)  
+[Miyesier Kaerman](https://github.com/miyeaier)  
+
+## User stories
 ```
 As a programmer  
 In order to produce good quality code  
@@ -40,4 +50,7 @@ As a Customer
 In order to manage my funds  
 I need to have a personal account
 
-```
+```  
+
+## Acknowledgement  
+Thank you [CraftAcademy](https://craftacademy.se/) for giving us this challenge.
