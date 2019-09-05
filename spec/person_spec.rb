@@ -17,9 +17,9 @@ describe Person do
         expect(subject.cash).to eq 0
     end
 
-    # it 'is expected to have an :account attribute' do
-    #     expect(subject.account).to be nil
-    # end
+    it 'is expected to have an :account attribute' do
+        expect(subject.account).to be nil
+    end
 
     # describe 'can create an Account' do
 
