@@ -1,4 +1,4 @@
-require './lib/account'
+
 
 class Person
   attr_accessor :name, :cash, :account
@@ -6,7 +6,7 @@ class Person
   def initialize(attrs = {})
     @name = set_name(attrs[:name])
     @cash = 0
-    @account = account
+    @account = nil
   end
 
   def set_name(obj)
@@ -18,11 +18,7 @@ class Person
   end
 
   def create_account
-    @account = Account.new
+    @account = Account.new(owner: self)
   end
-
-  # def my_account_instance(obj)
-  #   obj = Account.new 
-  # end
 
 end
