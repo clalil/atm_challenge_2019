@@ -9,7 +9,11 @@ class Person
   end
 
   def set_name(obj)
-    obj == nil ? nil : obj
+    obj == nil ? no_name : obj
+  end
+
+  def no_name
+    raise 'A name is required'
   end
 
 end
