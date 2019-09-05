@@ -1,13 +1,12 @@
 
 
 class Person
-  attr_accessor :name, :cash, :account, :deposit
+  attr_accessor :name, :cash, :account
 
   def initialize(attrs = {})
     @name = set_name(attrs[:name])
     @cash = 0
     @account = nil
-    @deposit = 
   end
 
   def set_name(obj)
@@ -22,9 +21,16 @@ class Person
     @account = Account.new(owner: self)
   end
 
-  def deposit(money)
-    money == nil ? be_truthy : money
-  
-
+  def deposit(sum)
+    @deposit = sum
   end
+
+  # def make_deposit(money)
+  #   money == nil ? no_money : money
+  # end
+
+  # def no_money
+  #   raise 'No account present'
+  # end
+
 end
