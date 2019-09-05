@@ -36,14 +36,14 @@ describe Person do
 
     end
 
-    # describe 'can manage funds if an account has been created' do
-    #     let(:atm) { Atm.new }
+    describe 'can manage funds if an account has been created' do
+        let(:atm) { Atm.new }
 
-    #     before { subject.create_account }
+        before { subject.create_account }
 
-    #     it 'can deposit funds' do
-    #         expect(subject.deposit(100)).to be_truthy
-    #     end
+        it 'can deposit funds' do
+            expect(subject.deposit(100)).to be_truthy
+        end
 
     #     describe 'can not manage funds if no account been created' do
     #         it 'can\'t deposit funds' do
@@ -51,6 +51,6 @@ describe Person do
     #         end
     #     end
 
-    # end
+    end
 
 end
