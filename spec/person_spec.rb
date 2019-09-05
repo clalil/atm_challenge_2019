@@ -4,7 +4,7 @@ require './lib/account'
 
 describe Person do
 
-    subject { described_class.new( name: 'Thomas') }
+    subject { described_class.new(name: 'Thomas') }
 
     it 'is expected to have a :name on initialize' do
         expect(subject.name).not_to be nil
@@ -45,7 +45,7 @@ describe Person do
             expect(subject.deposit(100)).to be_truthy
         end
 
-        describe 'can not manage funds if no account been created' do
+        describe 'cannot manage funds if no account has been created' do
             it 'can\'t deposit funds' do
                 expect { subject.deposit(100) }.to raise_error(RuntimeError, 'No account present')
             end
