@@ -1,3 +1,5 @@
+require './lib/account'
+
 class Person
   attr_accessor :name, :cash, :account
 
@@ -15,5 +17,12 @@ class Person
     raise 'A name is required'
   end
 
+  def create_account
+    @account = Account.new
+  end
+
+  # def my_account_instance(obj)
+  #   obj = Account.new 
+  # end
 
 end
