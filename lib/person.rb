@@ -22,15 +22,11 @@ class Person
   end
 
   def deposit(sum)
-    @deposit = sum
+    @deposit == nil ? no_money : sum
   end
 
-  # def make_deposit(money)
-  #   money == nil ? no_money : money
-  # end
-
-  # def no_money
-  #   raise 'No account present'
-  # end
+  def no_money
+    raise 'No account present'
+  end
 
 end
