@@ -1,8 +1,6 @@
 require './lib/person'
 require './lib/atm'
 require './lib/account'
-require 'pry'
-
 
 describe Person do
     subject { described_class.new(name: 'Clarissa & Miyesier') }
@@ -32,7 +30,7 @@ describe Person do
 
         it 'with himself as an owner' do
             expect(subject.account.owner).to be subject
-          end
+        end
     end
 
     describe 'can manage funds if an account has been created' do
