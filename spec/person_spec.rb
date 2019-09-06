@@ -1,6 +1,8 @@
 require './lib/person'
 require './lib/atm'
 require './lib/account'
+require 'pry'
+
 
 describe Person do
     subject { described_class.new(name: 'Clarissa & Miyesier') }
@@ -45,7 +47,7 @@ describe Person do
             subject.cash = 100
             subject.deposit(100)
             expect(subject.account.balance).to be 100
-            expect(subjet.cash).to be 0
+            expect(subject.cash).to be 0
         end
 
         it 'can withdraw funds' do 
@@ -54,14 +56,14 @@ describe Person do
         end
        
         it 'withdraw is expected to raise an error if no ATM is passed in ' do
-            command = lambda { subject.withdraw(amont: 100, pin: subject.account.pin_code, account: subject.account) }
-            expect{ command.call }.to raise_error 'An ATM is required'
+            command = lambda { subject.withdraw(amount: 100, pin: subject.account.pin_code, account: subject.account) }
+            expect { command.call }.to raise_error 'An ATM is required'
         end 
 
         it 'funds are added to cash - deducted from account balance' do
             subject.cash = 100
             subject.deposit(100)
-            subject.withdraw(amont: 100, pin: subject.account.pin_code, account: subject.account, atm: atm)
+            subject.withdraw(amount: 100, pin: subject.account.pin_code, account: subject.account, atm: atm)
             expect(subject.account.balance).to be 0
             expect(subject.cash).to be 100
         end

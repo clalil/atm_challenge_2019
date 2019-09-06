@@ -1,20 +1,26 @@
-
+require './lib/account'
+require 'pry'
 
 class Person
-  attr_accessor :name, :cash, :account
+  attr_accessor :name, :account, :cash
 
   def initialize(attrs = {})
     @name = set_name(attrs[:name])
-    @cash = 0
     @account = nil
+    @cash = 0
+  end
+
+  def withdraw_funds(args)
+    args[:atm] == nil ? no_atm_present : atm = args[:atm]
+    account = @account
+    amount = args[:amount]
+    pin = args[:pin]
+    response = atm.withdraw(amount, pin, account)
+    response[:status] == true ? increase_cash(response) : response
   end
 
   def set_name(obj)
     obj == nil ? no_name_set : obj
-  end
-
-  def deposit(amount)
-    @account.nil? ? no_account_present : deposit_funds(amount)
   end
 
   def no_name_set
@@ -25,10 +31,25 @@ class Person
     @account = Account.new(owner: self)
   end
 
-  def deposit_funds(sum)
-    @cash -= sum
-    @account.balance += sum
-    # sum.nil ? no_account_present : sum
+  def deposit(amount)
+    @account.nil? ? no_account_present : deposit_funds(amount)
+  end
+
+  def deposit_funds(deposit)
+    @cash -= deposit
+    @account.balance += deposit
+  end
+
+  def withdraw(args = {})
+    @account == nil ? no_account_present : withdraw_funds(args)
+  end
+
+  def increase_cash(response)
+     @cash += response[:amount]
+  end
+
+  def no_atm_present
+    raise RuntimeError, 'An ATM is required'
   end
 
   def no_account_present
