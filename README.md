@@ -1,12 +1,53 @@
 # The ATM challenge
 
-## Built with
+## Dependencies
 **Programming language:** Ruby  
 **Testing framework:** [RSpec](https://rspec.info/) 
 
 ## Authors  
 [Clarissa Liljander](https://github.com/clalil)  
-[Miyesier Kaerman](https://github.com/miyeaier)  
+[Miyesier Kaerman](https://github.com/miyeaier) 
+
+## The code  
+This program is built in the image of an Atm machine in the real world. As a user, you may create an account, receive a unique pincode, deposit and retrieve funds from your bank account as well as being denied to use the atm if you do not have an active account and/or an expired credit card.  
+
+## Setup  
+To test this application you need to fork it to your own GitHub account and clone it to your local workspace. Once you have cloned the repository, you will be able to:  
+* Create an own account in your name
+* Receive a unique pincode
+* Make a deposit  
+* Make a withdraw using your personal pin code  
+
+To get started, run IRB in your local workspace. Make sure to load the following files:  
+
+>$ load './lib/atm.rb'  
+>$ load './lib/account.rb'  
+>$ load './lib/person.rb'  
+
+## Instructions  
+Once the files are loaded in IRB, get started by visiting your local Atm:  
+>$ atm = Atm.new  
+
+Create your own user:  
+>$ user = Person.new(name: 'Enter_your_name_here')  
+
+Create an account for yourself to receive your unique pincode and a card with an expiration date:    
+>$ user.create_account()  
+
+Make a deposit (the example deposits 50$):  
+>$ user.deposit(50)  
+
+Make withdraw using your unique pin code (this example uses amount 150$ and pin code 1234):  
+>$ user.withdraw(amount: 150, pin: 1234, atm: atm)  
+
+## Acknowledgement  
+Thank you [CraftAcademy](https://craftacademy.se/) for giving us this challenge.  
+
+## Updates/Improvements  
+When time given, we plan to refactor our code.  
+
+## License  
+This project is under the [MIT-license](https://en.wikipedia.org/wiki/MIT_License).
 
 ## User stories
 ```
@@ -67,6 +108,3 @@ In order to prevent me from using the wrong bank account
 I should not be able to make a deposit  
 
 ```  
-
-## Acknowledgement  
-Thank you [CraftAcademy](https://craftacademy.se/) for giving us this challenge.
