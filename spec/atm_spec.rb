@@ -39,7 +39,7 @@ describe Atm do
     expect(subject.withdraw(50, 9999, account)).to eq expected_output
   end
 
-  it 'reject withdraw if the card expired' do
+  it 'reject withdraw if the card has expired' do
     allow(account).to receive(:exp_date).and_return('12/15')
     expected_output = { status: false, message: 'card expired', date: Date.today }
     expect(subject.withdraw(6, '1234', account)).to eq expected_output
