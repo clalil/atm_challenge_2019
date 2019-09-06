@@ -3,8 +3,7 @@ require './lib/atm'
 require './lib/account'
 
 describe Person do
-
-    subject { described_class.new(name: 'Thomas') }
+    subject { described_class.new(name: 'Clarissa & Miyesier') }
 
     it 'is expected to have a :name on initialize' do
         expect(subject.name).not_to be nil
@@ -23,7 +22,6 @@ describe Person do
     end
 
     describe 'can create an Account' do
-
         before { subject.create_account }
 
         it 'of Account class' do
@@ -38,19 +36,16 @@ describe Person do
 
     describe 'can manage funds if an account has been created' do
         let(:atm) { Atm.new }
-
         before { subject.create_account }
 
         it 'can deposit funds' do
             expect(subject.deposit(100)).to be_truthy
         end
-
-        describe 'cannot manage funds if no account has been created' do
-            it 'can\'t deposit funds' do
-                expect { subject.deposit(100) }.to raise_error(RuntimeError, 'No account present')
-            end
-        end
-
     end
 
+    describe 'cannot manage funds if no account has been created' do
+        it 'can\'t deposit funds' do
+            expect { subject.deposit(100) }.to raise_error(RuntimeError, 'No account present')
+        end
+    end
 end
