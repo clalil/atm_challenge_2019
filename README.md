@@ -13,7 +13,7 @@ This program is built in the image of an Atm machine in the real world. As a use
 
 ## Setup  
 To test this application you need to fork it to your own GitHub account and clone it to your local workspace. Once you have cloned the repository, you will be able to:  
-* Create an own account in your name
+* Create an account in your own name
 * Receive a unique pincode
 * Make a deposit  
 * Make a withdraw using your personal pin code  
@@ -26,19 +26,28 @@ To get started, run IRB in your local workspace. Make sure to load the following
 
 ## Instructions  
 Once the files are loaded in IRB, get started by visiting your local Atm:  
->$ atm = Atm.new  
-
+```rb
+atm = Atm.new  
+```
 Create your own user:  
->$ user = Person.new(name: 'Enter_your_name_here')  
+```rb
+user = Person.new(name: 'Jane Doe')  #Enter your username of choice
+```
 
-Create an account for yourself to receive your unique pincode and a card with an expiration date:    
->$ user.create_account()  
+Create an account for yourself to receive your unique pincode and a card with an expiration date: 
+```rb   
+user.create_account()  
+```
 
-Make a deposit (the example deposits 50$):  
->$ user.deposit(50)  
+Make a deposit: 
+```rb
+user.deposit(50) #This example deposits 50$
+```
 
-Make withdraw using your unique pin code (this example uses amount 150$ and pin code 1234):  
->$ user.withdraw(amount: 150, pin: 1234, atm: atm)  
+Make withdraw using your unique pin code:  
+```rb 
+user.withdraw(amount: 150, pin: 1234, atm: atm)  #Use the pin provided to you when creating your account
+```
 
 ## Acknowledgement  
 Thank you [CraftAcademy](https://craftacademy.se/) for giving us this challenge.  
