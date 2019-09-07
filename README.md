@@ -19,10 +19,11 @@ To test this application you need to fork it to your own GitHub account and clon
 * Make a withdraw using your personal pin code  
 
 To get started, run IRB in your local workspace. Make sure to load the following files:  
-
->$ load './lib/atm.rb'  
->$ load './lib/account.rb'  
->$ load './lib/person.rb'  
+```
+$ load './lib/atm.rb'  
+$ load './lib/account.rb'  
+$ load './lib/person.rb'  
+```
 
 ## Instructions  
 Once the files are loaded in IRB, get started by visiting your local Atm:  
@@ -59,11 +60,7 @@ When time given, we plan to refactor our code.
 This project is under the [MIT-license](https://en.wikipedia.org/wiki/MIT_License).
 
 ## User stories
-```
-As a programmer  
-In order to produce good quality code  
-I want to work in a test driven development and unit test my code  
-
+```  
 As a User         
 In order to make a withdrawal        
 The ATM needs to have funds  
@@ -92,7 +89,7 @@ As an ATM operator
 In order to allow access to active customers  
 I want to allow withdrawals from only active accounts  
 
-As a Bank Customer  
+As a Customer  
 In order to withdraw funds in even  
 I want to receive funds in 5, 10 & 20$ bills  
 
