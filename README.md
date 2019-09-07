@@ -37,7 +37,7 @@ user = Person.new(name: 'Jane Doe')  #Enter your username of choice
 
 Create an account for yourself to receive your unique pincode and a card with an expiration date: 
 ```rb   
-user.create_account()  
+user.create_account  
 ```
 
 Make a deposit: 
