@@ -1,6 +1,6 @@
 # The ATM challenge
 
-## Dependencies
+## Built with  
 **Programming language:** Ruby  
 **Testing framework:** [RSpec](https://rspec.info/) 
 
@@ -10,6 +10,10 @@
 
 ## The code  
 This program is built in the image of an Atm machine in the real world. As a user, you may create an account, receive a unique pincode, deposit and retrieve funds from your bank account as well as being denied to use the atm if you do not have an active account and/or an expired credit card.  
+
+## Dependencies  
+* RSpec  
+* IRB  
 
 ## Setup  
 To test this application you need to fork it to your own GitHub account and clone it to your local workspace. Once you have cloned the repository, you will be able to:  
